@@ -1,0 +1,217 @@
+/* navbar */
+li,li a,h1{
+    font-family: "montserrat",sans-serif;
+    text-shadow: 2px 2px #42414157}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+}
+h1{
+    margin-left: 30px;
+    cursor: pointer;
+}
+#theme{
+    width: 40px;
+    border-radius: 50%;
+}
+nav ul{
+    list-style: none;
+}
+nav li{
+    display: inline-block;
+    padding: 10px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: all 0.4s ease 0s;
+}
+nav li a:hover{
+    color: yellow;
+}
+nav li a{
+    text-decoration: none;
+    color: var(--text-color2);
+}
+.active{
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: var(--additional-color);
+}
+
+.side{
+    display: none;
+}
+
+:root{
+    --primary-color:rgb(72, 70, 70);
+    --secondary-color:black;
+    --additional-color:rgb(247, 112, 16);
+    --text-color1:black;
+    --text-color2:white;
+}
+
+.dark-theme{
+    --primary-color:rgb(254, 252, 252);
+    --secondary-color:rgb(148, 124, 124);
+    --additional-color:rgb(191, 103, 30);
+    --text-color1:white;
+    --text-color2:black;
+}
+
+/* login */
+*{
+    margin: 0%;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: var(--secondary-color);
+
+}
+.bound{
+    background-color: var(--primary-color);
+    width: 35%;
+    margin-top:10%;
+    margin-left: 30%;
+    padding: 2px 0px;
+    left: 33%;
+    border-radius: 5px;
+}
+.container{
+    background-color: var(--primary-color);
+    margin: 20px 20px;
+    box-shadow: -3px -3px 10px black;
+    border-radius: 5px;
+}
+.contact{
+    font-family: 'Inter', sans-serif;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--additional-color);
+}
+.name{
+    width: 88%;
+    margin:60px 0px 20px 20px ; 
+}
+.email {
+    width: 88%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.subject{
+    width: 88%;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.subject ,.email ,.name{ 
+    padding: 10px 3px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.box{
+    border: 1px  solid black;
+}
+.signup{
+     margin-left: 37px;
+    margin-bottom: 30px;
+    width: 80%;
+    padding: 7px;
+    border-style: none;
+    background-color:var(--additional-color) ;
+    box-shadow: 3px 2px rgb(63, 63, 63);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.login{
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-style: none;
+    color: var(--additional-color);
+    padding: 4px 20px;
+    transition: 0.3s;
+    background-color: var(--secondary-color);
+}
+.login a{
+    text-decoration: none;
+    color: var(--additional-color);
+}
+.login:hover,.signup:hover{
+    transform: scale(0.9);
+}
+h4{
+    text-align: center;
+    font-family: 'monserrat', sans-serif;
+    color: rgb(229, 54, 54);
+}
+
+@media(max-width:800px){
+
+.bound{
+    min-width: 80%;
+margin-left: 13%;
+}
+
+/* navbar */
+nav ul li{
+    display:block;
+   }
+  
+   
+   nav{
+    position: absolute;
+    background: orangered;
+    height: 100vh;
+    top: 0;
+    right: -200px;
+    transition: 1s;
+   }
+   
+   .side{
+    display: block;
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+   }
+   nav ul{
+    padding: 10px;
+   }
+   .bound{
+    margin-top: 20%;
+   }
+   .container h1{
+    font-size: 8vw;
+   }
+   .signup{
+    margin-left: 10%;
+    font-size: 2vw;
+   }
+   .login{
+    margin-left: 25%;
+    font-size: 2vw;
+   }
+   .box{
+    padding: 5px;
+   }
+   .all{
+    margin-left: 25%;
+    margin-top: 55%;
+    max-width: 60%;
+    font-size: 3vw;
+  }
+.all button{
+    font-size: 3vw;
+    max-width: 40%;
+    margin-left: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-style: none;
+    padding: 5px;
+    cursor: pointer;
+}
+}

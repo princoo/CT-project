@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body> 
+
+        <header>
+        <h1 class="logo"><img src="./images/Vector.svg" alt="" srcset="" class="vector"></h1>
+        <nav>
+            <i class="side fa fa-close" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="./pages/products.html">PRODUCTS</a></li>
+                <!-- <li><a href="./UI/html/about.html">ABOUT US</a></li> -->
+                <li><a href="./pages/contact.html">CONTACT</a></li>
+                <li><a href="./pages/login.html" id="text">LOGIN</a></li>
+                <li><a href="dashboard.html" id="dash" style="display: none;">DASHBOARD</a></li>
+
+            </ul>
+        </nav>
+        <i class="side fa fa-bars" onclick="showmenu()"></i>
+</header>
+
+<h1 class="text">
+    CART IT,<br>
+    INTRODUCING <br>
+    PRODUCTS FOR  <span style="color: white;">HOME </span>
+    <span style="color: white;">SPORTS </span>
+    <span style="color: white;">FASHION </span>
+</h1>
+  <a href="./UI/html/about.html"><button>GET STARTED</button></a>
+  <div class="footer">
+    <a href=""><p class="fav facebook"><i class="fa fa-facebook-f"></i></p></a>
+    <a href="https://twitter.com/princemavins"><p class="fav twitter"><i class="fa fa-twitter"></i></p></a>
+    <a href="https://www.linkedin.com/in/ineza-prince-9391ba15b/"><p class="fav linked"><i class="fa fa-linkedin"></i></p></a>
+
+  </div>
+  <div class="allcontainer">
+    <div class="all">
+     <p>WANT TO LOG OUT ?</p>
+     <button style="background-color: rgb(249, 154, 131);" id="logout">LOG OUT</button>
+     <button id="cancel">CANCEL</button>
+    </div>
+  </div>
+
+<!-- js file -->
+<script src="./js/runpage.js"></script>
+
+<script>
+  window.onload=popup()
+  const result= viewAdmin()
+result.then((data)=>{
+if(cookies.jwt && data.name.username=="admin"){
+  const dash= document.querySelector('#dash')
+dash.style.display="block"
+}else{
+}
+})
+
+  const text=document.getElementById("text")
+  const active= localStorage.getItem("Active")
+  const logout=document.getElementById("logout")
+  const cancel= document.getElementById("cancel")
+  const all=document.querySelector(".allcontainer")
+ const b=JSON.parse(active)
+  if (b.length>=1){
+    text.innerHTML="LOG OUT"
+    text.addEventListener('click',(e)=>{
+      e.preventDefault()
+      text.setAttribute("href","");
+      all.style.display="block";
+      logout.addEventListener('click',(e)=>{
+      e.preventDefault()
+      b.splice(0,1)
+      localStorage.setItem("Active",JSON.stringify(b))
+      window.location.reload()
+    })
+   cancel.addEventListener('click',(e)=>{
+    all.style.display="none"
+   })
+    })
+  }
+</script>
+
+
+</body>
+</html>

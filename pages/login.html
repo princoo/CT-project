@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <!-- navbar -->
+
+    <header>
+        <h1> <img src="../images/Vector.svg" alt=""  onclick="change()" id="theme"></h1>
+        <nav>
+            <i class="side fa fa-close" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="../../index.html">HOME</a></li>
+                <li><a href="./products.html">PRODUCTS</a></li>
+                <!-- <li><a href="about.html">ABOUT US</a></li> -->
+                <li><a href="contact.html">CONTACT</a></li>
+                <li onclick="dashboard(event)" ><a href="login.html" id="a">LOGIN</a></li>
+            </ul>
+        </nav>
+        <i class="side fa fa-bars" onclick="showmenu()"></i>
+</header>
+
+    <!-- login -->
+    <div class="bound">
+        <div class="container">
+            <form action="">
+            <h1 class="contact">LOGIN</h1>
+            <h4 class="error" id="error"></h4>
+            <input type="text" placeholder="EMAIL" class="box email" id="email" required> <br>
+            <input type="password" placeholder="PASSWORD" class="box subject" id="subject" required> <br>
+            <button class="login" onclick="login(event)">LOGIN</button>
+        </form>
+       <a href="signup.html"> <button class="signup">CREATE ACCOUNT</button></a>
+
+        </div>
+    </div>
+
+
+<script src="../js/runpage.js"></script>
+</body>
+
+</html>
