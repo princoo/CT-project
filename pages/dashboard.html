@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <header>
+        <h1> <img src="../images/Vector.svg" alt=""  onclick="change()" id="theme"></h1>
+        <nav>
+            <i class="side fa fa-close" onclick="hidemenu()"></i>
+            <ul>
+                <li><a href="../index.html">HOME</a></li>
+            <li><a href="./products.html">PRODUCTS</a></li>
+            <!-- <li><a href="about.html">ABOUT US</a></li> -->
+            <li><a href="./contact.html">CONTACT</a></li>
+            <li><a href="./login.html" id="a">LOGIN</a></li>
+            <li><a href="./dashboard.html" id="dash">DASHBOARD</a></li>
+            </ul>
+        </nav>
+        <i class="side fa fa-bars" onclick="showmenu()"></i>
+</header>
+
+    <!-- dashboard -->
+    <div class="flex">
+    <div class="left">
+        <img src="../images/cover.jpg" alt="">
+        <p style="color: rgb(223, 122, 40);"><b>ADMIN</b> </p>
+        <p class="email" >princeineza@gmail.com</p>
+        <a href="winblog.html"><div class="box blog"><p>PRODUCTS</p></div></a>
+        <a href="#"><div class="box drafts"><p>DRAFTS</p></div></a>
+        <a href="#"><div class="box messages"><p>MESSAGES</p></div></a> 
+        <a href="./dashboard.html"><div class="box add"><p>ADD PRODUCT</p></div></a>
+        <a href="#"><div class="box manage"><p>MANAGE</p></div></a>
+
+
+    </div>
+    <div class="right">
+    <h1>DASHBOARD</h1>  
+    <h3 style="color: rgb(203, 122, 40); margin-bottom: 30px;">ADD NEW PRODUCT</h3>
+    <form >
+        <div class="first">
+            <input type="text" placeholder="PRODUCT NAME" class="Pname">
+            <input type="text" placeholder="PRODUCT PRICE" class="Pprice">
+        </div>
+        <div class="second">
+            <select id="options" class="Pdropdown">
+                <option value="option1">CATEGORY</option>
+                <option value="option2">FASHION</option>
+                <option value="option3">HOME</option>
+                <option value="option3">ELECTRONICS</option>
+                <option value="option3">PHONES & TABLETS</option>
+                <!-- Add more options here -->
+              </select>
+            <input type="text" placeholder="QUANTITY" class="Pquantity">
+        </div>
+        
+        <!-- <input type="text" placeholder="PRODUCT NAME" name="title" class="title" id="title" > -->
+        <textarea name="body" cols="20" rows="10" placeholder="PRODUCT DESCRIPTION" class="body" id="body" ></textarea><br>
+        <input type="file" class="file" name="image" id="image" >
+        <h4 id="error" class="error"></h4>
+        <button type="submit" class="send submit" name="submit" id="addblog">ADD PRODUCT</button>
+        <button class="edit" name="submit" id="edit">SAVE PRODUCT</button>
+    </form>
+  </div>
+</div>
+
+<!-- popup div -->
+<div class="allcontainer">
+    <div class="all">
+     <p>WANT TO LOG OUT ?</p>
+     <button style="background-color: rgb(249, 154, 131);" id="logout">LOG OUT</button>
+     <button id="cancel">CANCEL</button>
+    </div>
+  </div>
+
+<!-- javascript -->
+<script src="../js/runpage.js"></script>
+
+</body>
+
+</html>
