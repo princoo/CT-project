@@ -18,7 +18,7 @@
             <i class="side fa fa-close" onclick="hidemenu()"></i>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-            <li><a href="./products.html">PRODUCTS</a></li>
+            <li><a href="./products.php">PRODUCTS</a></li>
             <!-- <li><a href="about.html">ABOUT US</a></li> -->
             <li><a href="./contact.html">CONTACT</a></li>
             <li><a href="./login.html" id="a">LOGIN</a></li>
@@ -31,12 +31,13 @@
     <!-- login -->
     <div class="bound">
         <div class="container">
-            <form action="">
+            <form action="../php/login.php" method="POST">
             <h1 class="contact">LOGIN</h1>
             <h4 class="error" id="error"></h4>
-            <input type="text" placeholder="EMAIL" class="box email" id="email" required> <br>
-            <input type="password" placeholder="PASSWORD" class="box subject" id="subject" required> <br>
-            <button class="login" onclick="login(event)">LOGIN</button>
+            <input type="text" placeholder="EMAIL" class="box email" id="email" name="email" required> <br>
+            <input type="password" placeholder="PASSWORD" class="box subject" id="subject" name="password" required> <br>
+            <!-- <button class="login" onclick="login(event)">LOGIN</button> -->
+            <button type="submit" class="login">LOGIN</button>
         </form>
        <a href="signup.html"> <button class="signup">CREATE ACCOUNT</button></a>
 

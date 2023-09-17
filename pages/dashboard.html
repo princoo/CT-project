@@ -17,7 +17,7 @@
             <i class="side fa fa-close" onclick="hidemenu()"></i>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-            <li><a href="./products.html">PRODUCTS</a></li>
+            <li><a href="./products.php">PRODUCTS</a></li>
             <!-- <li><a href="about.html">ABOUT US</a></li> -->
             <li><a href="./contact.html">CONTACT</a></li>
             <li><a href="./login.html" id="a">LOGIN</a></li>
@@ -33,7 +33,7 @@
         <img src="../images/cover.jpg" alt="">
         <p style="color: rgb(223, 122, 40);"><b>ADMIN</b> </p>
         <p class="email" >princeineza@gmail.com</p>
-        <a href="winblog.html"><div class="box blog"><p>PRODUCTS</p></div></a>
+        <a href="./winproducts.php"><div class="box blog"><p>PRODUCTS</p></div></a>
         <a href="#"><div class="box drafts"><p>DRAFTS</p></div></a>
         <a href="#"><div class="box messages"><p>MESSAGES</p></div></a> 
         <a href="./dashboard.html"><div class="box add"><p>ADD PRODUCT</p></div></a>
@@ -43,14 +43,14 @@
     </div>
     <div class="right">
     <h1>DASHBOARD</h1>  
-    <h3 style="color: rgb(203, 122, 40); margin-bottom: 30px;">ADD NEW PRODUCT</h3>
-    <form >
+    <!-- <h3 style="color: rgb(203, 122, 40); margin-bottom: 30px;">ADD NEW PRODUCT</h3> -->
+    <form action="../php/addproduct.php" method="POST" enctype="multipart/form-data">
         <div class="first">
-            <input type="text" placeholder="PRODUCT NAME" class="Pname">
-            <input type="text" placeholder="PRODUCT PRICE" class="Pprice">
+            <input type="text" placeholder="PRODUCT NAME" class="Pname" name="pName">
+            <input type="text" placeholder="PRODUCT PRICE" class="Pprice" name="pPrice">
         </div>
         <div class="second">
-            <select id="options" class="Pdropdown">
+            <select id="options" class="Pdropdown" name="category">
                 <option value="option1">CATEGORY</option>
                 <option value="option2">FASHION</option>
                 <option value="option3">HOME</option>
@@ -58,15 +58,13 @@
                 <option value="option3">PHONES & TABLETS</option>
                 <!-- Add more options here -->
               </select>
-            <input type="text" placeholder="QUANTITY" class="Pquantity">
+            <input type="text" placeholder="QUANTITY" class="Pquantity" name="quantity">
         </div>
         
-        <!-- <input type="text" placeholder="PRODUCT NAME" name="title" class="title" id="title" > -->
         <textarea name="body" cols="20" rows="10" placeholder="PRODUCT DESCRIPTION" class="body" id="body" ></textarea><br>
         <input type="file" class="file" name="image" id="image" >
         <h4 id="error" class="error"></h4>
         <button type="submit" class="send submit" name="submit" id="addblog">ADD PRODUCT</button>
-        <button class="edit" name="submit" id="edit">SAVE PRODUCT</button>
     </form>
   </div>
 </div>
